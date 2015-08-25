@@ -54,6 +54,12 @@ catPrototype = makeMammal({
   hello_text : 'meow'
   });
 
+// ** use mammal constructor to create whale prototype
+whalePrototype = makeMammal({
+  flipers : true,
+  hello_text : 'mmmooooooooweeeeeeehoooooooooo'
+});
+
 // ** cat constructor
 makeCat = function( arg_map ) {
   var cat = Object.create( catPrototype );
@@ -61,13 +67,32 @@ makeCat = function( arg_map ) {
   return cat;
   };
 
+// ** whale constructor
+makeWhale = function( arg_map) {
+  var whale = Object.create( catPrototype );
+  extendObject( whale, arg_map );
+  return whale;
+};
+
 // ** cat instance
 garfieldCat = makeCat({
   name : 'Garfield',
   weight_lbs : 8.6
   });
+  
+// ** whale instance
+shamuWhale = makeWhale({
+  name : 'Shamu',
+  killer_whale : true;
+  human_killer : false
+});
+
 
 // ** cat instance method invocations
 garfieldCat.say_hello();
 garfieldCat.say_text('Purr...');
+
+// ** whale instance method invocations
+shamuWhale.say_hello();
+shamuWhale.say_text('Doooooooorrrrryy!');
 
