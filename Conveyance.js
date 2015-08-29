@@ -51,7 +51,7 @@ makeTransport = function ( arg_map ) {
 carPrototype = makeTransport({
   has_four_wheels : true,
   make_noise : 'vroom'
-  });
+});
 
 planePrototype = makeTransport({
   has_wings : true,
@@ -64,7 +64,7 @@ makeCar = function( arg_map ) {
   var car = Object.create( carPrototype );
   extendObject( car, arg_map );
   return car;
-  };
+};
   
 makePlane = function( arg_map ) {
   var plane = Object.create( planePrototype );
@@ -77,7 +77,7 @@ nissanCar = makeCar({
   four_door : true,
   noise : 'beep beep im a car',
   weight_lbs : 2000
-  });
+});
 
 // plane instance
 jetPlane = makePlane({
