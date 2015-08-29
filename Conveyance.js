@@ -5,7 +5,8 @@
 var createObject, extendObject,
   makeNoise, makeTransport,
   carPrototype, planePrototype, makeCar, makePlane, nissanCar, jetPlane;
-  
+
+// THIS PART OF CODE IS FROM KITTY.js //
 // ** Utility function to set inheritance
 // Cross-browser method to inherit Object.create()
 // Newer js engines (v1.8.5+) support it natively
@@ -28,6 +29,7 @@ extendObject = function ( orig_obj, ext_obj ) {
     }
   }
 };
+// END OF CODE FROM KITTY.js//
 
 //  object method
 makeNoise = function () {
